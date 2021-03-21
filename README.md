@@ -7,4 +7,4 @@ Try out it https://developer.microsoft.com/en-us/graph/graph-explorer. You have 
 
 # Authentication
 To call the Graph API, we need to get access on behalf of user.
-See for https://developer.microsoft.com/en-us/graph/graph-explorer details on how to do that. We will get a refresh token along with the access token and can use that to refresh the access token one it expires.
+See for https://docs.microsoft.com/en-us/graph/auth-v2-user details on how to do that. We will get a refresh token along with the access token and can use that to refresh the access token one it expires.
