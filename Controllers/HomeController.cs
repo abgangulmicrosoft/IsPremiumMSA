@@ -12,5 +12,9 @@ namespace AspDotNetCppThreejs.Controllers
         {
             return "Sample String from HomeController";
         }
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }
