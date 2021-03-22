@@ -8,9 +8,9 @@ namespace AspDotNetCppThreejs.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "Sample String from HomeController";
+            return View();
         }
         public IActionResult About()
         {
