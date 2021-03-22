@@ -8,3 +8,9 @@ Try out it https://developer.microsoft.com/en-us/graph/graph-explorer. You have 
 # Authentication
 To call the Graph API, we need to get access on behalf of user.
 See for https://docs.microsoft.com/en-us/graph/auth-v2-user details on how to do that. We will get a refresh token along with the access token and can use that to refresh the access token one it expires.
+
+# Steps to register an App
+1. Login to the app registration portal https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
+2. Register a new App
+3. Select AzureADandPersonalMicrosoftAccount as audience. You can changet the setting fom Manifest tab.
+4. From the Authentication tab, add redirect URIs. Make sure to use the same convention in the consuming app.
