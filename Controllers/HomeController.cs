@@ -16,8 +16,9 @@ namespace AspDotNetCppThreejs.Controllers
         {
             return View();
         }
-        public IActionResult Add()
+        public IActionResult Add(string code)
         {
+            ViewBag.code = code;
             return View();
         }
     }
