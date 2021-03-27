@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,14 @@ namespace AspDotNetCppThreejs.Controllers
     {
         public IActionResult Index()
         {
+            const string url = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
+            var parameters = new Dictionary<string, string>();
+            parameters["client_id"] = "f1e1a7e0-4ae5-490d-91e6-45cc6ec5ee32";
+            parameters["response_type"] = "code";
+            parameters["redirect_uri"] = "https://localhost:44328/home/add/";
+            parameters["response_mode"] = "query";
+            parameters["scope"] = "offline_access user.read";
+            ViewBag.url =  QueryHelpers.AddQueryString(url, parameters);
             return View();
         }
         public IActionResult About()
