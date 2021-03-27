@@ -34,7 +34,8 @@ namespace AspDotNetCppThreejs.Controllers
             HttpResponseMessage response = await client.SendAsync(request);
             if (response.IsSuccessStatusCode)
             {
-                return "Success Posting";
+                var contents = await response.Content.ReadAsStringAsync();
+                return "Success Posting - " + contents;
             }
             else
             {
