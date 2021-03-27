@@ -14,3 +14,6 @@ See for https://docs.microsoft.com/en-us/graph/auth-v2-user details on how to do
 2. Register a new App
 3. Select AzureADandPersonalMicrosoftAccount as audience. You can changet the setting fom Manifest tab.
 4. From the Authentication tab, add redirect URIs. Make sure to use the same convention in the consuming app.
+
+Reference:
+https://github.com/mlafleur/node-v2endpoint-example/blob/master/index.js
