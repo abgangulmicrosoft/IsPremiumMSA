@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace AspDotNetCppThreejs.Controllers
 {
@@ -25,6 +26,20 @@ namespace AspDotNetCppThreejs.Controllers
         public string Post()
         {
             return "Posted";
+        }
+        public async Task<string> Get()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://ispremiummsa.azurewebsites.net/home/post");
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                return "Success Posting";
+            }
+            else
+            {
+                return response.ReasonPhrase;
+            }
         }
     }
 }
