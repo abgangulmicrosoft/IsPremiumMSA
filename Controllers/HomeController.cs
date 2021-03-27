@@ -29,9 +29,8 @@ namespace AspDotNetCppThreejs.Controllers
         }
         public async Task<string> Get()
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "https://ispremiummsa.azurewebsites.net/home/post");
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.SendAsync(request);
+            HttpResponseMessage response = await client.PostAsync("https://ispremiummsa.azurewebsites.net/home/post", null);
             if (response.IsSuccessStatusCode)
             {
                 var contents = await response.Content.ReadAsStringAsync();
