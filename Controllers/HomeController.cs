@@ -21,5 +21,10 @@ namespace AspDotNetCppThreejs.Controllers
             ViewBag.code = code;
             return View();
         }
+        [HttpPost]
+        public string Post()
+        {
+            return "Posted";
+        }
     }
 }
