@@ -17,3 +17,4 @@ See for https://docs.microsoft.com/en-us/graph/auth-v2-user details on how to do
 
 Reference:
 https://github.com/mlafleur/node-v2endpoint-example/blob/master/index.js
+https://office.visualstudio.com/OC/_git/MOService?path=%2Fprivate%2Fmoservices%2Fsrc%2FMOAdminPortal%2FMOAdminPortal%2FControllers%2FAccountController.cs&_a=contents&version=GBdevelop
