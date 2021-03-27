@@ -23,14 +23,16 @@ namespace AspDotNetCppThreejs.Controllers
             return View();
         }
         [HttpPost]
-        public string Post()
+        public string Post(string code)
         {
-            return "Posted";
+            return "Posted code " + code;
         }
         public async Task<string> Get()
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.PostAsync("https://ispremiummsa.azurewebsites.net/home/post", null);
+            var parameters = new Dictionary<string, string>();
+            parameters["code"] = "test";
+            HttpResponseMessage response = await client.PostAsync("https://ispremiummsa.azurewebsites.net/home/post", new FormUrlEncodedContent(parameters));
             if (response.IsSuccessStatusCode)
             {
                 var contents = await response.Content.ReadAsStringAsync();
