@@ -1,8 +1,13 @@
 'use strict';
-var http = require('http');
-var port = process.env.PORT || 1337;
+const express = require("express");
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello from Azure Nodejs Web Application\n');
-}).listen(port);
+const app = express();
+const port = process.env.PORT || "8000";
+
+app.get("/", (req, res) => {
+    res.status(200).send("Hello from Express");
+});
+
+app.listen(port, () => {
+    console.log(`Listening to requests on http://localhost:${port}`);
+});
