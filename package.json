@@ -1,0 +1,14 @@
+{
+  "name": "is-premium-msa",
+  "version": "0.0.0",
+  "description": "IsPremiumMSA",
+  "scripts": {
+    "start": "node server"
+  },
+  "engines": {
+    "node": "~6.10.x"
+  },
+  "author": {
+    "name": ""
+  }
+}
